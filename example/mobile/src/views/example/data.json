@@ -1,0 +1,101 @@
+{
+    "data": {
+        "categories": [
+            {
+                "categoryId": 1,
+                "content": "Indicadores Nutricionais",
+                "questions": [
+                    {
+                        "questionId": 1,
+                        "type": "multiple",
+                        "content": "Qual é a classificação da condição corporal do animal?",
+                        "answers": [
+                            {
+                                "answerId": 1,
+                                "type": "check",
+                                "content": "Muito magro"
+                            },
+                            {
+                                "answerId": 2,
+                                "type": "check",
+                                "content": "Magro"
+                            },
+                            {
+                                "answerId": 3,
+                                "type": "check",
+                                "content": "Ideal"
+                            },
+                            {
+                                "answerId": 4,
+                                "type": "check",
+                                "content": "Acima do peso"
+                            },
+                            {
+                                "answerId": 5,
+                                "type": "photo",
+                                "content": "Tire uma foto"
+                            }
+                        ]
+                    },
+                    {
+                        "questionId": 2,
+                        "type": "text",
+                        "content": "Qual seria o grau de mau trato?",
+                        "answers": [
+                            {
+                                "answerId": 6,
+                                "type": "text",
+                                "content": "Descreva"
+                            }
+                        ]
+                    },
+                    {
+                        "questionId": 3,
+                        "type": "single",
+                        "content": "O animal possui alimentação disponível?",
+                        "answers": [
+                            {
+                                "answerId": 7,
+                                "type": "check",
+                                "content": "Sim"
+                            },
+                            {
+                                "answerId": 8,
+                                "type": "check",
+                                "content": "Não"
+                            }
+                        ]
+                    },
+                    {
+                        "questionId": 4,
+                        "type": "single",
+                        "content": "O que o animal come?",
+                        "answers": [
+                            {
+                                "answerId": 9,
+                                "type": "check",
+                                "content": "Ração"
+                            },
+                            {
+                                "answerId": 10,
+                                "type": "check",
+                                "content": "Comida caseira"
+                            },
+                            {
+                                "answerId": 11,
+                                "type": "text",
+                                "content": "Outros"
+                            }
+                        ],
+                        "shouldDisplay": [
+                            {
+                                "questionId": 3,
+                                "answerId": 7
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

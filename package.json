@@ -1,0 +1,36 @@
+{
+  "name": "@app-masters/questions-component",
+  "version": "1.0.0",
+  "description": "A component for question and andswers management for React Native",
+  "main": "src/index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/app-masters/questions-component.git"
+  },
+  "keywords": [
+    "question",
+    "answer",
+    "component",
+    "app",
+    "masters",
+    "react",
+    "native"
+  ],
+  "author": "AppMasters",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/app-masters/questions-component/issues"
+  },
+  "homepage": "https://github.com/app-masters/questions-component#readme",
+  "dependencies": {
+    "@app-masters/react-native-ui-kit": "^0.1.16",
+    "react-native-actionsheet": "^2.4.2",
+    "react-native-image-crop-picker": "^0.23.1"
+  }
+}

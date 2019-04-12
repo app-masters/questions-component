@@ -1,0 +1,27 @@
+{
+    "categories": [
+        {
+            "categoryId": 1,
+            "content": "Indicadores Nutricionais",
+            "answers": [
+                {
+                    "questionId": 3,
+                    "content": "O animal possui alimentação disponível?",
+                    "answer": "Sim",
+                    "answers": [
+                        {
+                            "questionId": 4,
+                            "content": "O que o animal come?",
+                            "answer": "Comida caseira"
+                        }
+                    ]
+                },
+                {
+                    "questionId": 2,
+                    "content": "Teste",
+                    "answer": "Talvez"
+                }
+            ]
+        }
+    ]
+}
