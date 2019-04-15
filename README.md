@@ -1,10 +1,59 @@
-# Q&A component:
-O component de Q&A é um component utilizado para criar formulários de perguntas e respostas. Ele recebe as views que serão utilizadas para exibir as perguntas e cada uma das respostas, e também recebe o metadado que é o Json utilizado para montar as perguntas e respostas, seguindo o padrão:
-
 Questions component is a component used to make forms in a QnA style. It receives the views that will be used to render questions and also for each one of answer type. It also receives the data, which is the Json/Object used to render questions and answers.
 
-This data/metadata must follow the pattern:
+## Installing 
+You only need to run:
+```
+npm i @app-masters/questions-component --save
+```
 
+## Usage
+
+**Before using the component, follow the installation and usage steps of each dependecy(look down) first.**
+
+The starting point component is the ```QuestionAnswers``` component, you just got to import it, and call it giving the views you want to use.
+
+You **have** to give it the custom views you want it to render. *But* it already comes with some default views that you can use and also help you implement your own.
+
+Like this:
+```js
+import React from 'react';
+import {
+	QuestionAnswers,
+	QuestionView,
+	AnswerCheckView,
+	AnswerTextView,
+	AnswerPhotoView
+} from '@app-masters/questions-component';
+
+class Example extends React.Component {
+	constructor(props) {
+		super(props);
+		this.onFormSubmit = this.onFormSubmit.bind(this);
+	}
+	render() {
+		return <QuestionAnswers
+			componentDefinition={{
+				questionView: QuestionView,
+				answerCheckView: AnswerCheckView,
+				answerTextView: AnswerTextView,
+				answerPhotoView: AnswerPhotoView,
+			}}
+			data={this.props.data}
+			onFormSubmit={this.onFormSubmit} />;
+	}
+
+	onFormSubmit(answers) {
+		console.log(answers);
+	}
+}
+
+export default Example;
+```
+
+## Metadata
+As you can see on the example above, we are giving the component some ```data``` that for this example comes from ```this.props.data```. An example of this data is at the bottom of the page.
+
+This metadata can be anything, but must follow the pattern:
 ```ts
 Category -  
     Id: Int  
@@ -30,7 +79,7 @@ Answer -
 
 **Any question can depend on any previous answer using the "ShouldDisplay" property, but it is important to know that, this dependent question must be placed on the array just after the *last* question it depends from.**
 
-
+## Definitions
 These are the component properties, and *all of them are required*:
 ```ts
     componentDefinition: {
@@ -49,9 +98,15 @@ These are the component properties, and *all of them are required*:
 
 - **[beefe/react-native-actionsheet](https://github.com/beefe/react-native-actionsheet)**: The component depend on this package so the action sheet that allows the user to select photo or gallery to shown.
 
-**Before using the component, follow the installation steps of each dependecy first.**
+- **[app-masters/react-native-ui-kit](https://github.com/app-masters/react-native-ui-kit)**: The component uses this ui kit for some of its styling.
 
-## Example
+**Before using the component, follow the installation and usage steps of each dependecy first.**
+
+## Known errors
+- If you get the error ```TypeError: Cannot read property 'ph3' of null```:  
+    You are not calling ```startStyles(AppStyles)``` from the [app-masters/react-native-ui-kit](https://github.com/app-masters/react-native-ui-kit) dependecy. Check this dependecy installation instructions.
+
+## Data example
 This is an example of the metadata Json:
 ```json
 {
