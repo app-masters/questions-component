@@ -1,9 +1,11 @@
 import React from 'react';
-import QuestionAnswers from './../../components/questionAnswers';
-import QuestionView from './../questionAnswers/questionView';
-import AnswerCheckView from './../questionAnswers/answerCheckView';
-import AnswerTextView from './../questionAnswers/answerTextView';
-import AnswerPhotoView from './../questionAnswers/answerPhotoView';
+import {
+    AnswerCheckView,
+    AnswerPhotoView,
+    AnswerTextView,
+    QuestionAnswers,
+    QuestionView,
+} from '@app-masters/questions-component';
 
 import { data } from './data.json';
 

@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@app-masters/questions-component": "^1.0.0",
     "@app-masters/react-native-ui-kit": "^0.1.16",
     "react": "16.8.3",
     "react-native": "0.59.3",
