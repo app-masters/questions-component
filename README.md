@@ -62,7 +62,7 @@ Category -
 
 Question -  
     Id: Int  
-    Type: "multiple", "single", "text"  
+    Type: "multiple", "single"  
     Content: String  
     Answers: Answer[]  
     ShouldDisplay: ShouldDisplay[]  
@@ -73,7 +73,7 @@ ShouldDisplay -
 
 Answer -
     Id: Int  
-    Type: "check", "input", "photo"
+    Type: "check", "input", "photo", "text"  
     Content: String  
 ```
 
