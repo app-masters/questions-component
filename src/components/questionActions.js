@@ -135,6 +135,10 @@ class QuestionActions extends React.Component {
             selectedAnswers.splice(index, 1);
         } else if (multiple) {
             // If we can select multiple questions, just push it
+            if (index !== -1) {
+                selectedAnswers.splice(index, 1);
+            }
+
             selectedAnswers.push(receivedAnswer);
         } else {
             // If we can select only a single question, create an array with only this question
